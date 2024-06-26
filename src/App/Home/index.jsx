@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../../components/NavBar'
 import { Carousel } from 'nuka-carousel'
 import CustomSlider from '../../components/CustomSlider'
+import Button from '../../components/Button'
 
 const Home = () => {
 
@@ -44,6 +45,12 @@ const Home = () => {
     <>
       <NavBar />
       <CustomSlider sliders={data} />
+
+      <section className='flex gap-2 justify-around px-10  py-4 '>
+        <Button className='bg-green-700 text-white px-2 rounded-full' texto='Click' accion={() => console.log( "Hola mundo" )} />
+        <Button className='bg-green-700 text-white px-2 rounded-full' texto='Click' accion={() => console.log( "Hola mundo2" )} />
+        <Button className='bg-green-700 text-white px-2 rounded-full' texto='Click' accion={() => console.log( "Hola mundo3" )} />
+      </section>
     </>
   )
 }
