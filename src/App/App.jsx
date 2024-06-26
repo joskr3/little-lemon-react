@@ -14,7 +14,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/pago" component={Pago} />
       <Route path="/registro" component={Registro} />
-      <Route path="/registro" component={Reservacion} />
+      <Route path="/reservacion" component={Reservacion} />
       {/* Default route in a switch */}
       <Route>404: No such page!</Route>
     </Switch>
