@@ -67,7 +67,7 @@ const Home = () => {
 
       <div>
 
-        <div className='flex flex-col md:flex-row  m-auto w-[98%] gap-4'>
+        <div className='flex flex-col md:flex-row  m-auto w-[98%] gap-2'>
 
 
           {

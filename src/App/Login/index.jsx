@@ -1,9 +1,10 @@
 import React from "react";
+import CustomNavBar from "../../components/CustomNavbar";
 
 function Login() {
   return (
     <div>
-      Hola soy el login
+      <CustomNavBar/>
     </div>
   )
 }
