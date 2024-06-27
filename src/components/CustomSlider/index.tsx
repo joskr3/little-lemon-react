@@ -14,12 +14,31 @@ interface Props {
 }
 
 
+const Contenido = () => {
+  return (
+    <div className='flex flex-col gap-4 justify-around absolute z-50 mx-2 mt-3 grow h-full'>
+      <h1 className='text-white text-sm md:text-2xl'>
+        Cookie lemmon PROMO
+      </h1>
+      <p className='text-white text-sm md:text-2xl'>
+        50% off!
+      </p>
+      <Button className='bg-green-700 text-white px-2 py-1  rounded-full text-sm w-fit' texto='Comprar YA!' accion={() => console.log("Hola mundo")} />
+    </div>
+  )
+}
+
+
 const CustomSlider = ({ sliders }: Props) => {
   return (
-    <Carousel autoplay showArrows swiping>
-      {
-        sliders.map((slider) => <CustomImage titulo="Titulo" descripcion='hola' boton={<Button className='bg-green-700 text-white px-2 rounded-full' texto='Click' accion={() => console.log("Hola mundo")} />} nuevoAncho={slider.newWidth} alt={slider?.alt} ruta={slider.ruta} />)
-      }
+    <Carousel showArrows swiping>
+      <>
+        <Contenido />
+        {
+          sliders.map((slider, index) => <CustomImage key={index} nuevoAncho={slider.newWidth} alt={slider?.alt} ruta={slider.ruta} />)
+        }
+      </>
+
     </Carousel>
   )
 }

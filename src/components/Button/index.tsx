@@ -6,7 +6,7 @@ interface Props {
   accion: () => void
 }
 
-const Button = ({texto,className,accion}:Props) => {
+const Button = ({texto="",className,accion}:Props) => {
   return (
     <button type='button' className={className} onClick={accion} >
       {texto}

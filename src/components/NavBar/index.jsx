@@ -3,7 +3,7 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <header className='flex gap-2 justify-between m-auto px-3 py-3'>
+    <header className='flex gap-2 justify-between m-auto p-3'>
       <section>
         <Menu color="#067f1a" className='block md:hidden' />
         <p className='text-green-700 text-xl md:text-3xl  hidden md:block'>Menu</p>
