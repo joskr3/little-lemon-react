@@ -3,6 +3,7 @@ import NavBar from '../../components/NavBar'
 import CustomSlider from '../../components/CustomSlider'
 import Button from '../../components/Button'
 import Cards from '../../components/Cards'
+// import CarouselGatitos from '../../components/CarouselGatitos'
 
 const dataCards = [
   {
@@ -54,7 +55,6 @@ const Home = () => {
     }
   ]
 
-
   return (
     <>
       <NavBar />
@@ -64,12 +64,8 @@ const Home = () => {
           textos.map( ( texto, indice ) => <Button key={indice} className='bg-green-700 text-white px-2 py-1 min-w-20 rounded-full text-sm' texto={texto.texto} accion={() => console.log( "Hola mundo3" )} /> )
         }
       </section>
-
       <div>
-
         <div className='flex flex-col md:flex-row  m-auto w-[98%] gap-2'>
-
-
           {
             dataCards.map( item => (
               <Cards text={item.text} src={item.src} alt={item.alt} />
@@ -77,6 +73,7 @@ const Home = () => {
           }
         </div>
       </div>
+      {/* <CarouselGatitos/> */}
     </>
   )
 }
