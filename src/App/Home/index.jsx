@@ -2,6 +2,27 @@ import React from 'react'
 import NavBar from '../../components/NavBar'
 import CustomSlider from '../../components/CustomSlider'
 import Button from '../../components/Button'
+import Cards from '../../components/Cards'
+
+const dataCards = [
+  {
+    text: 'Test the flawor of the best vegetables in town',
+    src: "/src/assets/postre.jpg",
+    alt: 'imagen 1'
+  },
+  {
+    text: 'Test the flawor of the best meat in town',
+    src: '/src/assets/dessert2.jpg',
+    alt: 'imagen 2'
+  },
+  {
+    text: 'Test the flawor of the best asian food in town',
+    src: '/src/assets/dessert3.jpg',
+    alt: 'imagen 3'
+  },
+
+]
+
 
 const Home = () => {
 
@@ -46,12 +67,14 @@ const Home = () => {
 
       <div>
 
-        <div className='flex gap-4 border border-solid m-auto w-[98%]'>
-          {/* <img src='../../assets/dessetr1.jpg' alt='postre 2' width={500} height={500} /> */}
-          <img src='/src/assets/postre.jpg' alt='postre' width={100} />
-          <p className='p-6'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi nulla accusamus
-          </p>
+        <div className='flex flex-col md:flex-row  m-auto w-[98%] gap-4'>
+
+
+          {
+            dataCards.map( item => (
+              <Cards text={item.text} src={item.src} alt={item.alt} />
+            ) )
+          }
         </div>
       </div>
     </>
