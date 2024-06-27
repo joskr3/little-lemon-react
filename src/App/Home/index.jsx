@@ -10,50 +10,43 @@ const Home = () => {
     newWidth: 1200,
     alt: 'postre 1'
   },
+  {
+    ruta: "/src/assets/dessert2.jpg",
+    newWidth: 1000,
+    alt: 'postre 2'
+  },
+  {
+    ruta: "/src/assets/dessert3.jpg",
+    newWidth: 1500,
+    alt: 'postre 3'
+  }
+  ]
+  const textos = [
     {
-      ruta: "/src/assets/dessert2.jpg",
-      newWidth: 1000,
-      alt: 'postre 2'
+      texto: "vegano"
     },
     {
-      ruta: "/src/assets/dessert3.jpg",
-      newWidth: 1500,
-      alt: 'postre 3'
+      texto: "Carnes"
+    },
+    {
+      texto: "Asiatica"
     }
-    //   ,
-    // {
-    //   ruta: "/src/assets/dessert3.jpg",
-    //   newWidth: 1100,
-    //   alt: 'postre 3'
-    // }
-    //   ,
-    // {
-    //   ruta: "/src/assets/dessert3.jpg",
-    //   newWidth: 800,
-    //   alt: 'postre 3'
-    // }
-    //   ,
-    // {
-    //   ruta: "/src/assets/dessert3.jpg",
-    //   newWidth: 600,
-    //   alt: 'postre 3'
-    // }
   ]
+
 
   return (
     <>
       <NavBar />
       <CustomSlider sliders={data} />
-
       <section className='flex gap-2 justify-around px-10  py-4 '>
-        <Button className='bg-green-700 text-white px-2 py-1 min-w-20 rounded-full text-sm' texto='Vegano' accion={() => console.log( "Hola mundo" )} />
-        <Button className='bg-green-700 text-white px-2 py-1 min-w-20 rounded-full text-sm' texto='Carnes' accion={() => console.log( "Hola mundo2" )} />
-        <Button className='bg-green-700 text-white px-2 py-1 min-w-20 rounded-full text-sm' texto='Asiatica' accion={() => console.log( "Hola mundo3" )} />
+        {
+          textos.map( ( texto, indice ) => <Button key={indice} className='bg-green-700 text-white px-2 py-1 min-w-20 rounded-full text-sm' texto={texto.texto} accion={() => console.log( "Hola mundo3" )} /> )
+        }
       </section>
 
       <div>
 
-        <div className='flex gap-4 border border-solid'>
+        <div className='flex gap-4 border border-solid m-auto w-[98%]'>
           {/* <img src='../../assets/dessetr1.jpg' alt='postre 2' width={500} height={500} /> */}
           <img src='/src/assets/postre.jpg' alt='postre' width={100} />
           <p className='p-6'>
