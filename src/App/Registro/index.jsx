@@ -1,5 +1,5 @@
 import React from "react";
-import CustomNavBar from "../../components/CustomNavbar";
+import CustomNavBar from "../../components/custom/CustomNavbar";
 import styles from "../styles";
 import { useForm } from 'react-hook-form';
 
