@@ -3,7 +3,7 @@ import { ChevronLeft, ShoppingCart } from 'lucide-react';
 import { useLocation } from "wouter";
 
 
-const CustomNavBar = () => {
+const CSNav = () => {
   const [ location, setLocation ] = useLocation();
 
   return (
@@ -16,11 +16,10 @@ const CustomNavBar = () => {
         Little <span className='text-green-700 text-2xl md:text-5xl'>Lemmon</span>
       </p>
       <div className='flex gap-1'>
-        
         <ShoppingCart color="#067f1a" className='text-2xl md:text-5xl' />
       </div>
     </header>
   )
 }
 
-export default CustomNavBar
+export default CSNav
