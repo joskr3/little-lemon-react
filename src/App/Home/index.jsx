@@ -22,8 +22,8 @@ const Home = () => {
       <div>
         <div className={dataCardsStyles}>
           {
-            dataCards.map( item => (
-              <Cards text={item.text} src={item.src} alt={item.alt} />
+            dataCards.map( ( { text, src, alt } ) => (
+              <Cards text={text} src={src} alt={alt} />
             ) )
           }
         </div>
